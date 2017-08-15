@@ -18,6 +18,18 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(document).bind("contextmenu", function (e) {
+				if (e.target.nodeName == 'IMG') {
+					//context menu attempt on top of an image element
+					return false;
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -222,7 +234,7 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
+	
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/main.js"></script>
 
